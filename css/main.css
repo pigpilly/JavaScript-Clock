@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background: -webkit-gradient(linear, left top, right top, from(#00aaff), to(#00ffea));
+  background: linear-gradient(to right, #00aaff, #00ffea);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-transform: rotate(var(--rotation));
+          transform: rotate(var(--rotation));
+}
+
+.clock .number span {
+  display: inline-block;
+}
+
+.clock .number1 {
+  --rotation: 30deg;
+}
+
+.clock .number1 span {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.clock .number2 {
+  --rotation: 60deg;
+}
+
+.clock .number2 span {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+.clock .number3 {
+  --rotation: 90deg;
+}
+
+.clock .number3 span {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.clock .number4 {
+  --rotation: 120deg;
+}
+
+.clock .number4 span {
+  -webkit-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+}
+
+.clock .number5 {
+  --rotation: 150deg;
+}
+
+.clock .number5 span {
+  -webkit-transform: rotate(-150deg);
+          transform: rotate(-150deg);
+}
+
+.clock .number6 {
+  --rotation: 180deg;
+}
+
+.clock .number6 span {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.clock .number7 {
+  --rotation: 210deg;
+}
+
+.clock .number7 span {
+  -webkit-transform: rotate(-210deg);
+          transform: rotate(-210deg);
+}
+
+.clock .number8 {
+  --rotation: 240deg;
+}
+
+.clock .number8 span {
+  -webkit-transform: rotate(-240deg);
+          transform: rotate(-240deg);
+}
+
+.clock .number9 {
+  --rotation: 270deg;
+}
+
+.clock .number9 span {
+  -webkit-transform: rotate(-270deg);
+          transform: rotate(-270deg);
+}
+
+.clock .number10 {
+  --rotation: 300deg;
+}
+
+.clock .number10 span {
+  -webkit-transform: rotate(-300deg);
+          transform: rotate(-300deg);
+}
+
+.clock .number11 {
+  --rotation: 330deg;
+}
+
+.clock .number11 span {
+  -webkit-transform: rotate(-330deg);
+          transform: rotate(-330deg);
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 10px;
+  height: 50%;
+  background-color: black;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 3;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+          transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock .hand.second {
+  width: 3px;
+  height: 50%;
+  background-color: red;
+}
+
+.clock .hand.minute {
+  width: 7px;
+  height: 40%;
+  background-color: black;
+}
+
+.clock .hand.hour {
+  width: 11px;
+  height: 35%;
+  background-color: black;
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 20rem) {
+  .clock {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .clock {
+    width: 400px;
+    height: 400px;
+  }
+  .clock .number {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 96rem) {
+  .clock {
+    width: 750px;
+    height: 750px;
+  }
+  .clock .number {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 128rem) {
+  .clock {
+    width: 1000px;
+    height: 1000px;
+  }
+  .clock .number {
+    font-size: 3rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
